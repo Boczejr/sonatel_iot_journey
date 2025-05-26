@@ -60,10 +60,18 @@
                     </li>
                     <li class="nav-item {{ 'active' if active_page == 'value_chain' }}">
                         <a href="{{ url_for('main.value_chain') }}" class="nav-link">
-                            <i class="fas fa-link"></i>
-                            <span>Chaine de Valeur</span>
+                          <i class="fas fa-box-open"></i>
+                          <span>Chaine de Valeur</span>
                         </a>
                     </li>
+                    
+                    <li class="nav-item {{ 'active' if active_page == 'Catalogue' }}">
+                      <a href="{{ url_for('main.catalogue') }}" class="nav-link">
+                          <i class="fas fa-link"></i>
+                          <span>Catalogue</span>
+                      </a>
+                  </li>
+                  
                     <li class="nav-item {{ 'active' if active_page == 'technologies' }}">
                         <a href="{{ url_for('main.technologies') }}" class="nav-link">
                             <i class="fas fa-microchip"></i>
