@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonatel IoT Journey - Contact</title>
+    
+    <!-- Favicon -->
+        <link rel="icon" href="{{ url_for('static', filename='images/sonatel-logo.png') }}">
+
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="{{ url_for('main.index') }}">
+                <img src="{{ url_for('static', filename='images/sonatel-logo.png') }}" alt="Sonatel IoT" class="logo">
+                <span class="brand-text">IoT<span class="highlight">Journey</span></span>
+            </a>
+            
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item {{ 'active' if active_page == 'index' }}">
+                        <a href="{{ url_for('main.index') }}" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'value_chain' }}">
+                        <a href="{{ url_for('main.value_chain') }}" class="nav-link">
+                            <i class="fas fa-link"></i>
+                            <span>Chaine de Valeur</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'technologies' }}">
+                        <a href="{{ url_for('main.technologies') }}" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Technologies</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'use_cases' }}">
+                        <a href="{{ url_for('main.use_cases') }}" class="nav-link">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Cas d'Usage</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'chatbot' }}">
+                        <a href="{{ url_for('main.chatbot') }}" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>GenAI</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'contact' }}">
+                        <a href="{{ url_for('main.contact') }}"  class="contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Hero Section -->
+<section class="use-cases-hero">
+    <div class="hero-content">
+      <div class="hero-content animate__animated animate__fadeInDown">
+        <h1 id="message">Contactez l'équipe IoT Sonatel</h1>
+        <p class="mini-message">Une question ? Un projet ? Notre équipe d'experts est à votre écoute pour vous accompagner dans votre transformation numérique.</p>
+        <a href="{{ url_for('main.value_chain') }}" class="hero-btn">Découvrir la chaîne de valeur</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Contact Info Section -->
+<section class="contact-info-section">
+    <div class="container">
+        <div class="contact-grid">
+            <!-- Adresse -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Adresse</h3>
+                <div class="contact-details">
+                    <p>Sonatel IoT Center</p>
+                    <p>Immeuble Orange Digital Center</p>
+                    <p>Corniche Ouest, Dakar</p>
+                    <p>Sénégal</p>
+                </div>
+            </div>
+
+            <!-- Téléphones -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Téléphones</h3>
+                <div class="contact-details">
+                    <p><strong>Support technique:</strong> +221 33 839 01 01</p>
+                    <p><strong>Commercial:</strong> +221 33 839 02 02</p>
+                    <p><strong>Urgence 24/7:</strong> +221 33 839 03 03</p>
+                </div>
+            </div>
+
+            <!-- Email & Réseaux -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email & Réseaux</h3>
+                <div class="contact-details">
+                    <p><strong>Email:</strong> iot@sonatel.sn</p>
+                    <p><strong>LinkedIn:</strong> Sonatel IoT</p>
+                    <p><strong>Twitter:</strong> @SonatelIoT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    <h2>Contactez-nous</h2>
+    <p>Vous souhaitez en savoir plus sur nos solutions IoT ou nous proposer une collaboration ? Remplissez ce formulaire.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <label for="name">Nom complet *</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Adresse e-mail *</label>
+        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="company">Société / Organisation</label>
+        <input type="text" id="company" name="company" placeholder="Nom de l'entreprise">
+      </div>
+
+      <div class="form-group">
+        <label for="subject">Objet *</label>
+        <input type="text" id="subject" name="subject" placeholder="Objet de votre message" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Envoyer</button>
+      <p id="formMessage" class="form-message"></p>
+    </form>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4>Liens rapides</h4>
+            <ul>
+              <li><a href="{{ url_for('main.index') }}">Accueil</a></li>
+              <li><a href="#">À propos</a></li>
+              <li><a href="{{ url_for('main.technologies') }}">Technologies</a></li>
+              <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT / LTE-M</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#mobile">4G / 5G</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacts</h4>
+            <ul>
+              <li><a href="#">contact@iot-sonatel.sn</a></li>
+              <li><a href="#">+221 77 123 45 67</a></li>
+              <li><a href="#">Dakar, Sénégal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-x"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sonatel IoT Journey. Tous droits réservés.</p>
+          <div class="footer-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+          </div>
+        </div>
+      </footer>
+      
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+ <!-- Back to Top Button -->
+ <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+ <!-- Bootstrap JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+ 
+ <!-- Waypoints -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+ 
+ <!-- CounterUp -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+ 
+ <!-- Custom JS -->
+ <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+ <!-- Custom JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+ <!-- Script pour masquer le preloader -->
+ <script>
+ window.addEventListener('load', () => {
+     const preloader = document.querySelector('.preloader');
+     if (preloader) {
+     preloader.style.display = 'none';
+     }
+ });
+ </script>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonatel IoT Journey - Accueil</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/sonatel-logo.png') }}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="brand" href="{{ url_for('main.index') }}">
+                <img src="{{ url_for('static', filename='images/sonatel-logo.png') }}" alt="Sonatel IoT" class="logo">
+                <span class="brand-text">IoT<span class="highlight">Journey</span></span>
+            </a>
+            
+            <button class="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item {{ 'active' if active_page == 'index' }}">
+                        <a href="{{ url_for('main.index') }}" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Accueil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'value_chain' }}">
+                        <a href="{{ url_for('main.value_chain') }}" class="nav-link">
+                            <i class="fas fa-link"></i>
+                            <span>Chaine de Valeur</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'technologies' }}">
+                        <a href="{{ url_for('main.technologies') }}" class="nav-link">
+                            <i class="fas fa-microchip"></i>
+                            <span>Technologies</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'use_cases' }}">
+                        <a href="{{ url_for('main.use_cases') }}" class="nav-link">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Cas d'Usage</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'chatbot' }}">
+                        <a href="{{ url_for('main.chatbot') }}" class="nav-link">
+                            <i class="fas fa-robot"></i>
+                            <span>GenAI</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ 'active' if active_page == 'contact' }}">
+                        <a href="{{ url_for('main.contact') }}"  class="contact-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <!-- Hero Section -->
+<section class="use-cases-hero">
+    <div class="hero-content">
+      <div class="hero-content animate__animated animate__fadeInDown">
+        <h1 id="message">Bienvenue dans l’univers de l’IoT by Sonatel</h1>
+        <p class="mini-message">Explorez comment les objets connectés transforment le Sénégal et l’Afrique, grâce à l’innovation, la connectivité et l’intelligence.</p>
+        <a href="{{ url_for('main.value_chain') }}" class="hero-btn">Découvrir la chaîne de valeur</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Section Présentation -->
+<section class="about-iot">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">L'IoT au service de votre transformation numérique</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Ce portail présente l'expertise IoT de Sonatel, inspirée du modèle "IoT Journey" du Groupe Orange. Découvrez comment nos solutions connectées répondent à vos besoins métiers.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Une chaîne de valeur complète</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Technologies éprouvées</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Assistance intelligente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="{{ url_for('static', filename='images/iot2.jpg') }}" alt="Réseau IoT Sonatel" class="about-image">
+                    <div class="tech-bubbles">
+                        <span class="bubble">LoRaWAN</span>
+                        <span class="bubble">NB-IoT</span>
+                        <span class="bubble">5G</span>
+                        <span class="bubble">Satellite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!--Technologies -->
+  <section class="iot-tech-section">
+    <div class="container">
+      <h2 class="section-title">Technologies IoT expérimentées chez Sonatel :</h2>
+      <a href="{{ url_for('main.technologies') }}" class="button-tech">
+                Technologies 
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+      <div class="tech-grid">
+        
+        <div class="tech-card-section ">
+          <i class="fas fa-broadcast-tower tech-icon" class="icon"></i>
+          <h3>LoRaWAN</h3>
+          <p>Idéale pour les capteurs longue portée et faible consommation, LoRaWAN couvre les besoins IoT dans les zones étendues.</p>
+          <a href="{{ url_for('main.technologies') }}#lorawan" class="btn-tech">En savoir plus</a>
+        </div>
+  
+        <div class="tech-card-section ">
+          <i class="fas fa-signal tech-icon"></i>
+          <h3>NB-IoT / LTE-M</h3>
+          <p>Ces réseaux cellulaires bas débit offrent une connectivité fiable pour les objets connectés dans les environnements urbains.</p>
+          <a href="{{ url_for('main.technologies') }}#nbiot"  class="btn-tech">En savoir plus</a>
+        </div>
+  
+        <div class="tech-card-section ">
+          <i class="fas fa-network-wired tech-icon"></i>
+          <h3>4G / 5G</h3>
+          <p>La 4G/5G permet des échanges de données massifs, une latence réduite et une connectivité en temps réel pour les usages critiques.</p>
+          <a href="{{ url_for('main.technologies') }}#mobile" class="btn-tech">En savoir plus</a>
+        </div>
+  
+        <div class="tech-card-section ">
+          <i class="fas fa-satellite-dish tech-icon"></i>
+          <h3>Connectivité satellite</h3>
+          <p>Pour les zones non couvertes par les réseaux terrestres, le satellite assure une connectivité fiable partout dans le monde.</p>
+          <a href="{{ url_for('main.technologies') }}#satellite"  class="btn-tech">En savoir plus</a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Section Assistant Virtuel -->
+<section class="assistant-section">
+    <div class="assistant-container">
+        <!-- Partie Texte -->
+        <div class="assistant-content">
+            <span class="section-subtitle">Innovation Sonatel</span>
+            <h2 class="section-title">Assistant IoT Intelligent</h2>
+            <p class="assistant-description">
+                Notre assistant virtuel alimenté par GenAI vous guide en temps réel dans l'écosystème IoT de Sonatel.
+            </p>
+            
+            <ul class="assistant-features">
+                <li>
+                    <i class="fas fa-comment-dots feature-icon"></i>
+                    <span>Réponses instantanées sur nos solutions IoT</span>
+                </li>
+                <li>
+                    <i class="fas fa-project-diagram feature-icon"></i>
+                    <span>Recommandations personnalisées selon vos besoins</span>
+                </li>
+                <li>
+                    <i class="fas fa-handshake feature-icon"></i>
+                    <span>Mise en relation avec nos experts</span>
+                </li>
+            </ul>
+            
+            <a href="{{ url_for('main.chatbot') }}" class="assistant-button">
+                Essayer GenAI IoT 
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+        </div>
+        
+        <!-- Partie Visuelle -->
+        <div class="assistant-visual">
+            <div class="chatbot-illustration">
+                <div class="chatbot-header">
+                    <div class="chatbot-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="chatbot-title">GenAI IoT</span>
+                </div>
+                <div class="chatbot-messages">
+                    <div class="message ai-message animate-message">
+                        <div class="typing-animation">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="message user-message animate-message delayed">
+                        <p>Quelle solution pour surveiller mes infrastructures ?</p>
+                    </div>
+                    <div class="message ai-message animate-message more-delayed">
+                        <p>Pour la surveillance d'infrastructures, je recommande nos capteurs LoRaWAN avec...</p>
+                    </div>
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" placeholder="Poser une question..." disabled>
+                    <button class="send-button" disabled>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="tech-icons">
+                <i class="fab fa-bluetooth-b" style="--delay: 0s"></i>
+                <i class="fas fa-satellite" style="--delay: 0.2s"></i>
+                <i class="fas fa-wifi" style="--delay: 0.4s"></i>
+                <i class="fas fa-microchip" style="--delay: 0.6s"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <section class="use-cases">
+    <div class="container">
+      <h2 class="section-title">Cas d’usage métiers</h2>
+      <p class="section-description">
+        Découvrez quelques solutions IoT concrètes déjà déployées ou en cours d’expérimentation à travers différents secteurs.
+      </p>
+
+            <a href="{{ url_for('main.use_cases') }}" class="button-tech">
+                Cas D'usage
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+  
+      <div class="use-case-grid">
+        <a href="{{ url_for('main.use_cases') }}#satisfaction"><div class="use-case-card">
+          <i class="fas fa-smile icon"></i>
+          <h3>Bouton de satisfaction client</h3>
+          
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#pirogue"><div class="use-case-card">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <h3>Géolocalisation de pirogues</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#trappe"><div class="use-case-card">
+          <i class="fas fa-door-open icon"></i>
+          <h3>Détection d’ouverture de trappes</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#temperature"><div class="use-case-card">
+          <i class="fas fa-thermometer-half icon"></i>
+          <h3>Monitoring température serveurs</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#humidite"><div class="use-case-card">
+          <i class="fas fa-seedling icon"></i>
+          <h3>Humidité du sol (agriculture)</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#porte"><div class="use-case-card">
+          <i class="fas fa-lock-open icon"></i>
+          <h3>Détection ouverture de portes</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#lampe"><div class="use-case-card">
+          <i class="fas fa-lightbulb icon"></i>
+          <h3>Prises et lampes connectées</h3>
+        </div>
+        </a>
+
+        <a href="{{ url_for('main.use_cases') }}#fumee"><div class="use-case-card">
+          <i class="fas fa-fire-extinguisher icon"></i>
+          <h3>Détecteurs de fumée</h3>
+        </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+<!-- Section Satellite Animation -->
+<section class="satellite-section">
+    <div class="section-header">
+        <h2>Nos Solutions Satellite</h2>
+        <p>Découvrez notre expertise en connectivité spatiale</p>
+    </div>
+
+    <div class="satellite-container">
+        <!-- Partie Carrousel -->
+        <div class="satellite-carousel">
+            <div class="carousel-track">
+                <div class="carousel-item active" data-index="0">
+                    <img src="{{ url_for('static', filename='images/satellite.png') }}" alt="Satellite 1">
+                </div>
+                <div class="carousel-item" data-index="1">
+                    <img src="{{ url_for('static', filename='images/satellite1.png') }}" alt="Satellite 2">
+                </div>
+                <div class="carousel-item" data-index="2">
+                    <img src="{{ url_for('static', filename='images/connectivite.png') }}" alt="Satellite 3">
+                </div>
+                <div class="carousel-item" data-index="3">
+                    <img src="{{ url_for('static', filename='images/usage.png') }}" alt="Satellite 4">
+                </div>
+                <div class="carousel-item" data-index="4">
+                    <img src="{{ url_for('static', filename='images/satellite.png') }}" alt="Satellite 5">
+                </div>
+                <div class="carousel-item" data-index="5">
+                    <img src="{{ url_for('static', filename='images/connectivite2.png') }}" alt="Satellite 6">
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots-container"></div>
+                <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Partie Descriptions -->
+        <div class="satellite-descriptions">
+            <div class="description-item active" data-index="0">
+                <h3>Connectivité Globale</h3>
+                <p>Couverture Internet haut débit même dans les zones les plus reculées grâce à notre réseau satellite.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Disponibilité 99.9%</li>
+                    <li><i class="fas fa-check"></i> Latence optimisée</li>
+                </ul>
+            </div>
+            <div class="description-item" data-index="1">
+                <h3>Surveillance Agricole</h3>
+                <p>Solutions IoT satellitaires pour le monitoring des cultures et l'optimisation des rendements.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Analyse des sols</li>
+                    <li><i class="fas fa-check"></i> Alertes sécheresse</li>
+                </ul>
+            </div>
+            <div class="description-item" data-index="2">
+                <h3>Maritime Connecté</h3>
+                <p>Suivi en temps réel des navires et communication fiable en pleine mer.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Géolocalisation précise</li>
+                    <li><i class="fas fa-check"></i> Données météo</li>
+                </ul>
+            </div>
+            <div class="description-item" data-index="3">
+                <h3>Urgences Humanitaires</h3>
+                <p>Déploiement rapide de connectivité pour les zones sinistrées.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Kit portable</li>
+                    <li><i class="fas fa-check"></i> Installation en 1h</li>
+                </ul>
+            </div>
+            <div class="description-item" data-index="4">
+                <h3>Mines & Energies</h3>
+                <p>Solutions robustes pour les sites d'extraction isolés.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Résistance extrême</li>
+                    <li><i class="fas fa-check"></i> Maintenance à distance</li>
+                </ul>
+            </div>
+            <div class="description-item" data-index="5">
+                <h3>Défense & Sécurité</h3>
+                <p>Communications sécurisées et chiffrées pour applications militaires.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Cryptage AES-256</li>
+                    <li><i class="fas fa-check"></i> Résistance aux interférences</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- CHAINE DE VALEUR -->
+<section class="value-chain-section">
+    <div class="section-header">
+        <h2>Chaine de valeur IoT & positionnement SONATEL</h2>
+        <p>Notre approche intégrée pour des solutions complètes</p>
+         <a href="{{ url_for('main.value_chain') }}" class="button-tech">
+                Chaine de valeurs 
+                <i class="fas fa-arrow-right button-icon"></i>
+            </a>
+    </div>
+
+    <div class="value-chain-container">
+        <!-- Étape 1 -->
+        <div class="chain-step" data-step="1">
+            <div class="step-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+            <h3>Device</h3>
+            <div class="step-content">
+                <p>Partenariats avec les fabricants d'objets connectés</p>
+                <ul>
+                    <li>Qualification des devices</li>
+                    <li>Intégration technologique</li>
+                    <li>Compatibilité réseau</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Étape 2 -->
+        <div class="chain-step" data-step="2">
+            <div class="step-icon">
+                <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Réseau</h3>
+            <div class="step-content">
+                <p>Notre expertise infrastructure réseau</p>
+                <ul>
+                    <li>Multi-technologies (LoRaWAN, NB-IoT, 4G/5G)</li>
+                    <li>Couverture étendue</li>
+                    <li>Réseau dédié IoT</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Étape 3 -->
+        <div class="chain-step" data-step="3">
+            <div class="step-icon">
+                <i class="fas fa-cloud"></i>
+            </div>
+            <h3>Plateforme</h3>
+            <div class="step-content">
+                <p>Notre plateforme IoT Cloud OTC</p>
+                <ul>
+                    <li>Centralisation des données</li>
+                    <li>Gestion des devices</li>
+                    <li>APIs d'intégration</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="chain-step" data-step="4">
+            <div class="step-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Application Métier</h3>
+            <div class="step-content">
+                <p>Partenariats avec les startups</p>
+                <ul>
+                    <li>Outils d'accompagnement</li>
+                    <li>Développement sur mesure</li>
+                    <li>Solutions sectorielles</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sonatel-position">
+        <div class="position-card">
+            <h3>Notre Positionnement Unique</h3>
+            <p>Sonatel comme intégrateur de solutions end-to-end :</p>
+            <ul>
+                <li><strong>Maîtrise technique</strong> - De la connectivité à la plateforme</li>
+                <li><strong>Écosystème partenarial</strong> - Fabricants et startups</li>
+                <li><strong>Expertise locale</strong> - Solutions adaptées au marché</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-col">
+            <h4>Liens rapides</h4>
+            <ul>
+              <li><a href="{{ url_for('main.index') }}">Accueil</a></li>
+              <li><a href="#">À propos</a></li>
+              <li><a href="{{ url_for('main.technologies') }}">Technologies</a></li>
+              <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT / LTE-M</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#mobile">4G / 5G</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contacts</h4>
+            <ul>
+              <li><a href="#">contact@iot-sonatel.sn</a></li>
+              <li><a href="#">+221 77 123 45 67</a></li>
+              <li><a href="#">Dakar, Sénégal</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suivez-nous</h4>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-x"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sonatel IoT Journey. Tous droits réservés.</p>
+          <div class="footer-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+          </div>
+        </div>
+      </footer>
+      
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+ <!-- Back to Top Button -->
+ <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 
+ <!-- Bootstrap JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+ 
+ <!-- Waypoints -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+ 
+ <!-- CounterUp -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+ 
+ <!-- Custom JS -->
+ <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+ <!-- Custom JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+ <!-- Script pour masquer le preloader -->
+ <script>
+ window.addEventListener('load', () => {
+     const preloader = document.querySelector('.preloader');
+     if (preloader) {
+     preloader.style.display = 'none';
+     }
+ });
+ </script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonatel IoT Journey - {% block title %}{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('main.index') }}">
+                    <img src="{{ url_for('static', filename='images/sonatel-logo.png') }}" alt="Sonatel IoT Journey" class="logo">
+                    <span class="brand-text">IoT Journey</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {% if request.path == url_for('main.index') %}active{% endif %}"> 
+                            <a class="nav-link" href="{{ url_for('main.index') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item {% if request.path == url_for('main.value_chain') %}active{% endif %}">
+                            <a class="nav-link" href="{{ url_for('main.value_chain') }}">Chaine de Valeur</a>
+                        </li>
+                        <li class="nav-item {% if request.path == url_for('main.technologies') %}active{% endif %}">
+                            <a class="nav-link" href="{{ url_for('main.technologies') }}">Technologies</a>
+                        </li>
+                        <li class="nav-item {% if request.path == url_for('main.use_cases') %}active{% endif %}">
+                            <a class="nav-link" href="{{ url_for('main.use_cases') }}">Cas d'Usage</a>
+                        </li>
+                        <li class="nav-item {% if request.path == url_for('main.chatbot') %}active{% endif %}">
+                            <a class="nav-link" href="{{ url_for('main.chatbot') }}">GenAI</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link contact-btn" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/sonatel-logo.png') }}" alt="Sonatel">
+                        <span>IoT Journey</span>
+                    </div>
+                    <p class="footer-about">
+                        Plateforme interactive présentant l'offre IoT de Sonatel, inspirée du modèle "IoT Journey" du Groupe Orange.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 footer-col">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="{{ url_for('main.index') }}">Accueil</a></li>
+                        <li><a href="{{ url_for('main.value_chain') }}">Chaine de Valeur</a></li>
+                        <li><a href="{{ url_for('main.technologies') }}">Technologies</a></li>
+                        <li><a href="{{ url_for('main.use_cases') }}">Cas d'Usage</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-col">
+                    <h4>Solutions IoT</h4>
+                    <ul>
+                        <li><a href="#">LoRaWAN</a></li>
+                        <li><a href="#">NB-IoT / LTE-M</a></li>
+                        <li><a href="#">4G / 5G</a></li>
+                        <li><a href="#">Connectivité satellite</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 footer-col" id="contact">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Dakar, Sénégal</li>
+                        <li><i class="fas fa-phone"></i> +221 33 839 00 00</li>
+                        <li><i class="fas fa-envelope"></i> iot-journey@sonatel.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="copyright">&copy; 2025 Sonatel IoT Journey. Tous droits réservés.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="footer-links">
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Waypoints -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    
+    <!-- CounterUp -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Custom JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Script pour masquer le preloader -->
+    <script>
+    window.addEventListener('load', () => {
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+        preloader.style.display = 'none';
+        }
+    });
+    </script>
+
