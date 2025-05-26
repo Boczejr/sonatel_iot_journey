@@ -10,6 +10,12 @@ def index():
 def value_chain():
     return render_template('value_chain.html', active_page="value_chain")
 
+
+
+@bp.route('/catalogue')
+def catalogue():
+    return render_template('catalogue.html', active_page="catalogue")
+
 @bp.route('/technologies')
 def technologies():
     return render_template('technologies.html', active_page="technologies")

@@ -63,6 +63,12 @@
                             <span>Chaine de Valeur</span>
                         </a>
                     </li>
+                    <li class="nav-item {{ 'active' if active_page == 'Catalogue' }}">
+                        <a href="{{ url_for('main.catalogue') }}" class="nav-link">
+                            <i class="fas fa-box-open"></i>
+                            <span>Catalogue</span>
+                        </a>
+                    </li>
                     <li class="nav-item {{ 'active' if active_page == 'technologies' }}">
                         <a href="{{ url_for('main.technologies') }}" class="nav-link">
                             <i class="fas fa-microchip"></i>
@@ -75,6 +81,7 @@
                             <span>Cas d'Usage</span>
                         </a>
                     </li>
+
                     <li class="nav-item {{ 'active' if active_page == 'chatbot' }}">
                         <a href="{{ url_for('main.chatbot') }}" class="nav-link">
                             <i class="fas fa-robot"></i>
