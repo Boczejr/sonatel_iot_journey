@@ -559,6 +559,38 @@ document.addEventListener('DOMContentLoaded', function() {
  </script>
 
 
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
+
+    hamburger.addEventListener('click', function() {
+        // Basculer les classes 'active' sur le hamburger et le menu
+        this.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        
+        // Empêcher le défilement de la page quand le menu est ouvert
+        if (navMenu.classList.contains('active')) {
+            body.classList.add('no-scroll');
+        } else {
+            body.classList.remove('no-scroll');
+        }
+    });
+    
+    // Fermer le menu quand on clique sur un lien (optionnel)
+    const navLinks = document.querySelectorAll('.nav-link, .contact-btn');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
+    });
+});
+
+</script>
 
 </body>
 </html>
