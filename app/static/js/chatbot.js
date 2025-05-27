@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("user-input-popup");
     const sendBtn = document.querySelector(".send-button");
@@ -33,4 +33,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-</script>
+
