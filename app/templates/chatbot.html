@@ -20,6 +20,26 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+
+<!-- Overlay Chatbot -->
+<div class="chatbot-overlay" id="chatOverlay">
+    <div class="chatbot-popup">
+        <div class="chatbot-header-popup">
+            <span>Assistant GenAI</span>
+            <button id="closeChat" class="close-btn">&times;</button>
+        </div>
+        <div class="chatbot-body">
+            <div id="chat-messages-popup" class="chat-messages"></div>
+            <div class="chat-input-area">
+                <input type="text" id="user-input-popup" placeholder="Entrez votre question..." />
+                <button class="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <body>
     <!-- Preloader -->
     <div class="preloader">
@@ -101,6 +121,47 @@
     </nav>
 </header>
 
+<section class="assistant-section">
+    <div class="assistant-container">
+        <!-- Texte de gauche -->
+        <div class="assistant-content">
+            
+            <h2 class="section-title">Discutez avec notre Assistant GenAI</h2>
+            <p class="assistant-description">
+                Posez toutes vos questions sur les technologies IoT, les solutions proposées par Sonatel ou le catalogue. Notre assistant intelligent est là pour vous guider en temps réel.
+            </p>
+            <ul class="assistant-features">
+                <li><i class="fas fa-check feature-icon"></i><span>Réponses instantanées</span></li>
+                <li><i class="fas fa-check feature-icon"></i><span>Disponible 24/7</span></li>
+                <li><i class="fas fa-check feature-icon"></i><span>Basé sur les documents Sonatel IoT Journey</span></li>
+            </ul>
+            <div style="display: flex; justify-content: center; margin-top: 30px;">
+                <button class="chat-launch-btn" id="openChat">Lancer le Chat <i class="fas fa-robot"></i></button>
+            </div>
+                    </div>
+
+        <!-- Visuel de droite -->
+        <div class="assistant-visual">
+            <div class="chatbot-illustration" id="chatbot">
+                <div class="chatbot-header">
+                    <div class="chatbot-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="chatbot-title">Assistant GenAI</span>
+                </div>
+                <div class="chatbot-messages" id="chat-messages">
+                    <div class="message ai-message">Bonjour, comment puis-je vous aider ?</div>
+                </div>
+                <div class="chatbot-input">
+                    <input type="text" id="user-input" placeholder="Posez votre question ici...">
+                    <button class="send-button" id="send-button"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -222,6 +283,22 @@
 });
 
 </script>
+
+<script>
+    const openChatBtn = document.getElementById("openChat");
+    const closeChatBtn = document.getElementById("closeChat");
+    const chatOverlay = document.getElementById("chatOverlay");
+
+    openChatBtn.addEventListener("click", () => {
+        chatOverlay.style.display = "flex";
+    });
+
+    closeChatBtn.addEventListener("click", () => {
+        chatOverlay.style.display = "none";
+    });
+</script>
+
+
 
 
 </body>
