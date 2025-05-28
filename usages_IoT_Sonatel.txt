@@ -1,0 +1,136 @@
+
+--- Slide 1 ---
+NOUVEAUX USAGES
+
+--- Slide 2 ---
+IoT
+Confort intérieur
+Détecteur ouvrant
+Détecteur fumée
+Caméra motorisée
+PPT 4G/5G
+Bouton de satisfaction
+Ampoule connectée
+water metering
+Détecteur ouvrant
+80 opérateurs investissant activement dans la technologie LTE-M, dont :
+ 60 ont déployé ou lancé commercialement des réseaux LTE-M
+11 planifient, pilotent ou déploient des réseaux LTE-M
+9 testent la technologie LTE-M
+173 opérateurs investissant activement dans la technologie NB-IoT, dont :
+128 ont déployé ou lancé commercialement des réseaux NB-IoT
+24 planifient, pilotent ou déploient des réseaux NB-IoT
+19 évaluent ou testent la technologie NB-IoT
+LTE-M et NB-IoT : En 2023 on note 180 opérateurs qui ont déployé ou lancé des réseaux NB-IoT ou LTE-M dans 81 pays versus en 2022 : 78 opérateurs dans 80 pays
+LTE-M
+NB-IoT
+Adoption :
+Plus de 180 opérateurs de réseaux LoRaWAN dans le monde, couvrant plus de 100 pays.
+Plus de 250 millions de connexions LoRaWAN prévues d'ici la fin de l'année 2024.
+Déploiements dans une grande variété de secteurs, notamment les villes intelligentes, l'agriculture intelligente, l'industrie 4.0, la chaîne d'approvisionnement et la gestion des bâtiments.
+Tendance  : 
+Intégration de LoRaWAN avec d'autres technologies IoT, comme la 5G et le Bluetooth, satellite etc
+LoRa
+Les usages IoT testés à la Sonatel
+Parc devices OSN sur liveObject
+Etat de l’art des technologies IoT
+À noter que ses différentes technologies ont été expérimentées avec succès
+
+--- Slide 3 ---
+Usages IoT : Smart City/Building/Home
+Smart building
+Confort intérieur
+Détecteur ouvrant
+Détecteur fumée
+Caméra motorisée
+Push tp talk 4G/5G
+Bouton de satisfaction
+Ampoule connectée
+Smart water metering
+Détecteur ouvrant
+Smart Home
+Smart City
+
+--- Slide 4 ---
+Usages testés : IoT
+Mise en place d’un réseau LoRaWAN avec une nano-gateway backhaulée en fibre, qui établit une session VPN avec le serveur réseau LoRa de 'LoRa Anywhere' du groupe
+Détecteur de taux d’humidité sol installé sur un pot de fleur
+Utilisation widgets Liveobject pour la visualisation des données
+Trappe connectée
+Smart agriculture
+Trappe avec détecteur ouvrant  via un changement angle
+Utilisation du réseau mobile pour transmettre les données à liveobject
+Visualisation des données sous format json
+
+--- Slide 5 ---
+Usages IoT testés : Géolocalisation pirogues via satellite
+Pour les tests LTE-M avec SIM physique, nous avons utilisé la plateforme du fournisseur. Ceci est du au faite que liveobject ne supporte pas une connexion TCP direct.
+Utilisation de la plateforme du fournisseur qui offre plus de fonctionnalités répondant à la demande du Ministère
+Widgets Liveobject pour la visualisation des données
+KT520
+KT520 M
+La KT520 est un traqueur avec une connectivité satellite kinéis only.
+Traqueur KT520 M doté de connectivité satellite Kinéis et LTE-M.
+Priorisation de la transmission par satellite.
+Basculement automatique sur le réseau LTE-M en l'absence de signal satellite.
+Équipé d'un emplacement pour carte SIM physique.
+Intégration de la technologie eSIM pour une connectivité avancée
+
+--- Slide 6 ---
+Usages IoT Liveobject
+13 équipements au total : 77% actifs, 15% initialisés, 8% enregistrés.
+Trafic récent montre une volatilité avec une pointe en mai 2023 et des pertes notables entre juin et juillet, ainsi qu'en novembre 2023.
+Messages entrants dominent en mars 2023.
+33 équipements au total : 88% hors ligne, 12% en ligne.
+Diminution constante des messages entrants et sortants de mars 2023 à février 2024, avec une chute significative post-septembre 2023.
+
+--- Slide 7 ---
+Usages IoT Liveobject
+
+--- Slide 8 ---
+Etat des lieux technos IoT et Positionnement SONATEL
+Chaine de valeur IoT & positionnement SONATEL
+Device
+Réseau
+Plateforme
+App métier
+Device : nouer des partenariats avec les fabricants d’objets connectés.
+
+ 
+Réseau : S’appuyer sur notre expertise pour déployer des infrastructures réseau.  
+
+
+ Plateforme  : s’appuyer sur notre plateforme IoT Cloud OTC 
+
+    
+Application métier :Partenariats avec les startups en proposant des outils d’accompagnement pour le développement.
+Roadmap d’évolution des usages
+Etat de l’art et roadmap connectivité et plateforme IoT SONATEL
+LTE-M
+NB-IoT
+LoRa
+Réseau cellulaire LPWAN basé sur la 4G.
+Très faible consommation, bonne pénétration indoor (souterrains, bâtiments).
+Idéal pour capteurs fixes : smart metering, parking, environnement.
+État chez Sonatel : déjà testé et activable à la demande.
+Très faible consommation énergétique, portée longue (plusieurs km).
+Idéal pour les capteurs fixes : agriculture, compteur intelligent, qualité de l’air..
+État chez Sonatel : réseau testé et activable à la demande.
+Meilleure latence et débit que LoRa ou NB-IoT ; supporte la voix (VoLTE).
+Convient pour les cas d’usage avec mobilité : télémédecine, transport, wearables.
+État chez Sonatel : déjà testé et activable à la demande.
+Satellite
+5G SA & Redcap
+Couverture mondiale, idéale pour zones non couvertes par les réseaux terrestres.
+Utilisé dans l’agriculture, la logistique rurale, la pêche, les mines isolées.
+État chez Sonatel : testé avec partenaires, activable à la demande
+RedCap (Reduced Capability) : 5G intermédiaire entre LPWAN et 5G haut débit.
+Cible : caméras, robots, objets semi-intelligents.
+5G SA (Standalone) : cœur de réseau 5G natif avec support du network slicing.
+Cible : applications critiques (santé, industrie, transports).
+Chez Sonatel : Déploiement prévu à partir de 2028.
+🤝
+🤝
+
+--- Slide 9 ---
+Usages IoT Liveobject

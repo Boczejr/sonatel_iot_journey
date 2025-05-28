@@ -1,0 +1,303 @@
+
+--- Slide 1 ---
+5G Redcap
+DRPS/DEP/STR/SPIN
+Juin  2022
+
+--- Slide 2 ---
+Contexte
+Enjeux et objectifs 
+Présentation de la technologie NB-IoT
+Description de l’expérimentation technologique
+Objectifs du pilote
+Technologie et périmètre du Test 
+Description de la solution 
+Budget
+Calendrier
+Plan
+
+--- Slide 3 ---
+Contexte
+Source : Orange
+Marché en pleine croissance, selon Gartner, plus de 41 milliards d’objets connectés en 2025 selon IDC.
+Impact capacitaire sur la 4G noté lors du test LTE-M
+Nécessité d’interconnecter ces objets les uns avec les autres 
+Marché en attente d’une solution accessible au plus grand nombre.
+Couverture 4G dans la presque totalité du pays 
+Besoin en mobilité des objets pour le tracking
+Augmentation des déploiements NB-IoT dans le monde
+Déployer un réseau destiné aux objets connectés, permettant de réduire les coûts ainsi que la consommation électrique des appareils.
+Assurer la mobilité des objets 
+Utiliser notre infrastructure 4G pour faire de l’IoT
+Evaluer l’impact sur la capacité de notre réseau
+Etre prêt pour un déploiement commercial
+Enjeux et objectifs
+
+--- Slide 4 ---
+Présentation de la technologie NB-IoT
+
+--- Slide 5 ---
+Présentation de la technologie NB-IoT
+Est une technologie  4G destiné aux objets connectés
+Standardisée par la 3GPP en aout 2016 dans le cadre du LTE
+Nécessite des activations de licences sur le réseau LTE
+
+--- Slide 6 ---
+In-band : Correspond à un déploiement au sein de la bande traditionnelle LTE en occupant un bloc de ressource pour les communications NB-IoT. En d’autres termes, les communications NB-IoT sont transmises dans la même bande de fréquences que les communications LTE.
+
+Guard-Band : le signal NB-IoT est transmis en marge de la bande de fréquences traditionnelle LTE en utilisant les ressources spectrales non utilisées.
+
+Stand alone : correspond à un déploiement sur une bande de fréquences différente de celle du LTE. Dans beaucoup d’exemples, les fréquences du GSM sont indiquées pour le déploiement standalone car la porteuse d’un signal GSM correspond à l’occupation spectrale du NB-IoT.
+Présentation de la technologie NB-IoT
+NB :  à date le mode in-band est le plus déployé.
+
+--- Slide 7 ---
+Comparaison In-Band et Guard Band
+Le Guard Band ni impact sur le débit LTE ni sur la  capacité de la cellule LTE.
+In-band mode entraine une baisse de 4% à 14,5% sur le DL et 1% à 12% sur le UL
+
+--- Slide 8 ---
+NB-IoT vs LTE-M /LoRaWAN
+
+--- Slide 9 ---
+NB-IoT : Les avantages
+Faible consommation 
+La batterie peut durer 10 ans dépendant de la configuration
+Couverture étendue
+Cout faible 
+Puce (Hardwate  et Software ) beaucoup moins chère
+Déploiement réseau très facile
+
+--- Slide 10 ---
+Nombre de connexions cellulaires Internet des objets (M2M et NB-IoT) dans le monde de 2015 à 2021
+NB-IoT : évolution des connexions dans le monde
+Source : staista 2022
+
+--- Slide 11 ---
+NB-IoT : etat déploiement NB-IoT dans le monde
+166 opérateurs ont actuvement instesti dans la technologie NB-IoT, parmis eux
+124 ont déployé ou commercialisé 
+23 ont planifié, en pilote ou déployé NB-IoT
+19 évaluent ou testent la technologie NB-IoT
+En Afrique, il y’a que la Tunisie (test), Kenya (smart water metering), Afrique du sud ( smart water metering, smart parking etc)
+GSA 2022
+
+--- Slide 12 ---
+NB-IoT en europe
+Plusieurs pays Orange ont réévalué leur position sur le NB-IoT avec le metering  comme cible
+Commercialized (2017)
+Deployments: Parking (1500), Smart environment (5600)
+Metering (50  2.5M by end 2026)
+Commercialized (2021 - Complete coverage 2022) 
+Prospects: metering (5.5M meters) and Vehicle Emergency Beacon (33M) units
+Commercialized (2021)
+Prospects: utilities (2.9M€ in 2025)
+“NB-IoT ready” under study
+Under study, to answer T-Mobile competition on metering
+Not planned
+Not planned
+Ongoing ( T-1 passed)
+Only for roaming out (stating LTE-M weakness for global coverage)
+LTE-M cannot answer yet to European and Worldwide roaming
+GSMA – September 2021
+NB-IoT modules are the cheapest in 4G, well fitting metering
+(source : business talks with module suppliers)
+NB-IoT deployments (Millions) seen to beat LoRa at start 2022 
+Strategy Analytics – June 2020
+and comforted & challenged by market trends
+Stratégie du groupe : Lora + LTE-M, pas de skill center sur NB-IoT
+
+--- Slide 13 ---
+NB-IoT : état des déploiements en France
+Source : Orange
+27 Jan. 22 - Sigfox
+End Feb. 22
+2/3G sunset Annoucement
+By Orange
+17 Jan. 22
+NB-IoT launch
+
+28 Feb. 2022
+Stop of LoRa at end 2024
+7 Oct. 21
+First 5G IoT Orange offer
+(eMBB)
+New steps in OSP, ORO, OSK on NB-IoT
+NB-IoT Launch in 2019
+No LTE-M
+Reminder:
+
+--- Slide 14 ---
+NB-IoT dans le groupe Orange
+Slovakia
+Spain
+Poland
+Romania
+Belgium
+Senegal
+Moldavia
+OBS/SMS
+Luxembourg
+9 GW
+230k
+Nov 18
+
+Q1 18
+Q2 18
+Q4 19 TbC
+Q3 18
+
+
+Technical end 20
+Commercial start 21
+
+Technical launch Q4 2021
+Commercial start 02/22
+Q2 19
+National 09/20
+Bespoke
+
+H2 19 TbC
+Dakar PoC 2020
+Russia
+19 TbC
+Q4 19
+3 GWlocal
+6K
+Dec 17 
+Q2 19
+170037 GW +13 nano
+Q4 ‘19                                
+
+Q4 ‘21 5 main cities +  1,9K additional municipalities
+IoT Connect Anywhere
+Q1 18
+
+
+
+On-premises
+Q3 19
+
+Q4 18
+
+H1 21
+4962
+70K
+301 GW
+40
+Stratégie du groupe : Lora + LTE-M, pas de skill center sur NB-IoT  : Plusieurs pays Orange ont réévalué leur position sur le NB-IoT avec le meetering  comme cible.
+LoRa on global infrastructure : France + specific area in OSK, ORO + worldwide by SMS. OPL + OMD bespoke.
+6 countries launched LTE-M, with first roaming agreements
+NB-IOT new rise in Spain, Slovakia and Romania
+Live
+On-going
+Planned
+devices nb
+
+--- Slide 15 ---
+NB-IoT : déploiement dans le Groupe Orange  zoom sur la Belgique
+NB-IoT est déployée sur tout le territoire belge
+OBE  a collaboré avec Huawei, qui a contribué à intégrer l’IoT dans le réseau d’Orange
+Stratégie de la Belgique : 
+Ne pas déployer LoRa et faire un focus sur les technos standardisées 3GPP NB-IoT et LTE-M en utilisant une seule infrastructure : la 4G. 
+OBE couvre  plus de 96% du territoire belge en LTE
+Le déploiement national nécessite juste un  ugrade software  (Huawei SRAN12.1) 
+Pas de  LoRa car  : 3x plus cher (nécessite des autorisations  du régulateur et de nouvelles Gateway)
+Source : OBE
+Use cases :
+ NB-IoT bike trackers, Smart plug et smart parking
+
+--- Slide 16 ---
+Roadmap d ’introduction des techno IoT proposée par Orange
+2G
+3G
+LoRaWAN
+eMBB
+1996
+2006
+2013
+2016
+2018
+2021
+2022
+2025
+2028
+P
+metering
+parking
+building
+fleet management
+asset tracking
+wearable
+video
+autonomous 
+vehicle
+robot
+AR/VR
+paiementterminal
+Low cost
+Low bandwith
+Low energy
+Very Low latency
+Guaranteed performance
+High bandwidth
+Real time
+agriculture
+4G
+5G
+MassiveIoT
+Critical IoT
+RedCap
+LTE Cat >1
+LTE Cat1
+LTE-M
+NB-IoT
+
+--- Slide 17 ---
+Expérimentation technologique
+
+--- Slide 18 ---
+Organisation du projet
+
+--- Slide 19 ---
+8
+Janvier-17
+Scénario d’implémentation
+Modèle de déploiement :  
+Activer la licence NB-IoT sur le site de technopole 
+Activer les  licences coté core et PFS 
+Créer un APN dédié au test .
+Avoir plusieurs devices de test sur le site de technopole
+Huawei recommande de phaser le test en deux étapes :
+Première étape : sélectionner trois sites, activer la fonctionnalités NB-IoT  et observer le comportement des sites ( voir s’il y’a des impacts ou pas)	            à finaliser en mi  octobre 2022
+ Deuxième étape : test fonctionnel avec des devices NB-IoT 	  à finaliser décembre 2022
+ Planning détaillé attendu de Huawei et des autres fournisseurs
+Voir avec les équipes core si le RAT Type NB-IoT est supporté
+
+--- Slide 20 ---
+8
+Janvier-17
+Prérequis réseau
+Radio Access Network
+Utilisation des sites actuels 
+Licenses ( RTU ) nécessaires 
+Les cartes supportent déjà le NB-IOT
+Core Network
+Le HSS doit supporter le RAT type NB-IoT
+Prérequis sur les autres nœuds du core network
+Création d’un APN
+Plateforme de  Service
+LiveObject ou Backend des constructeurs, ou toute autre plateforme
+Live object est accessible sur Internet, donc il n'est pas nécessaire de créer un VPN
+
+--- Slide 21 ---
+NB-Iot : feature requirement
+
+--- Slide 22 ---
+8
+Janvier-17
+Demande de GO
+Test NB-IoT en 2022
+
+--- Slide 23 ---
+Merci

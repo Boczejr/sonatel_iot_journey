@@ -1,0 +1,77 @@
+
+--- Slide 1 ---
+Senegal Sonatel NB-IoT vEPCTechnical Solution and Workload
+
+--- Slide 2 ---
+Backgroud and General Solution:
+Single RAN
+G/U/L/NB IoT
+IoM Platform
+MED vUSN
+HLR/PCRF
+3rd Application Server
+RUF vUSN
+MED CGW
+MED DGW
+RUF CGW
+RUF DGW
+S11-C
+S11-C
+S11-U
+S11-U
+SGi
+SGi
+SGi
+RUF DGW
+Internet
+
+--- Slide 3 ---
+NB-IOT vEPC feature requirement
+Exist network analysis:
+1. Exist vEPC version is  V100R020C05, support NB-IoT feature.
+2. NB-IoT license is not exist on vEPC.
+Feature request analysis：
+CloudUSN                                                                                            CloudUGW
+
+--- Slide 4 ---
+NB-IOT vEPC interface variation
+Add new logic interface S11-U, use private IP design on CloudUSN and DGW.
+
+S1 、 S10 、 S11 、 S5&S8 、 S6a、NAS interface variation and CDR information is strengthened.
+
+New APN for NB-IoT need to be designed on CloudCGW&DGW.
+Interface design
+
+--- Slide 5 ---
+Deploy & Test case
+The main actions for deploy：
+
+LLD design for NB-IOT.
+
+2.  Create new S11-U interface and configure IP routing between CloudUSN and CloudDGW.
+
+3.  Create new DNSN on CloudUSN, point to CloudUGW. 
+
+4.  Create  new APN on CloudCGW, need check with Sonatel if need use specific VPN and IP pool,  static IP or dynamic IP for user；
+
+5.  Create new VPN and IP route configuration  on CloudCGW and PE if use new VPN. 
+
+6.  Service test and verify.
+Test case based on license availability on CloudUSN and CloudUGW ：
+
+ IP Data Over NAS
+
+Non-IP MO/MT Data over NAS
+
+3.   eNodeB Coverage Level Based Paging (optional)
+
+4.   Power Saving Mode Activation  (optional)
+
+5.   NB-IoT eDRX Mode Activation (optional)
+
+6.   NB-IoT SMS Transmission Over SGs (optional)
+
+--- Slide 6 ---
+Workload on vEPC
+
+--- Slide 7 ---

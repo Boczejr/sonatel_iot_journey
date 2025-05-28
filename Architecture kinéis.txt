@@ -1,0 +1,108 @@
+
+--- Slide 1 ---
+Projet Géolocalisation pirogues par satellite
+Description de la solution technique 
+09 Aout  2023
+
+--- Slide 2 ---
+Pirogue avec le tracker disposant de module GPS et deux modules de communications ( Satellite et LTE-M
+Station terrienne
+Nano Satellite
+Pirogue + device satellite
+Réseau de station terrienne interconnecté via des tunnels ipsec
+Cloud du fournisseur
+Push MQTT
+LiveObject
+Plateforme de gestion des  des données IoT et de managements des devices
+Application de géolocalisation
+
+--- Slide 3 ---
+est un dispositif matériel équipé d'un module GPS et de module de communication( kinéis et LTE-M). Il collecte les données de position en temps réel, telles que les coordonnées géographiques, et les envoie aux satellites du fournisseur. Il est utilisé pour suivre des actifs, des véhicules, des pirogues ou des individus.
+Tracker
+Station terriene
+La station terrienne capte les données transmises par les satellites en orbite basse. Elle traite et relaie ces données vers le cloud du fournisseur pour un stockage sécurisé et un traitement ultérieur.
+Live object
+offre une interface conviviale pour les utilisateurs. Elle permet d'interagir avec les données de géolocalisation, de surveiller les actifs, de visualiser les trajets, de définir des alertes et de générer des rapports personnalisés, facilitant ainsi la prise de décision et la gestion des ressources
+Nano satellite
+Cloud
+Les nano satellites en orbite basse agissent comme relais pour transmettre les données du tracker vers la Terre. Ils reçoivent les signaux de géolocalisation émis par les trackers et les stockent pour une transmission ultérieure à la station terrienne
+est une infrastructure qui stocke, traite et analyse les données de géolocalisation. Il reçoit les informations collectées par les satellites et les organise pour préparer l'envoi vers la plateforme Live Object du groupe Orange. Il intègre un broker Mqtt qui push les données vers LO sous forme de topic
+Application
+Application de gestion des evices et données IoT du groupe Orange. Elle intègre un subscriber Mqtt qui permet de recevoir en temps réel les données de géolocalisation  envoyées par le cloud.
+
+--- Slide 4 ---
+Implémentation
+
+--- Slide 5 ---
+Intégration plateforme kinéis live object 1/2
+Ici on choisit configurations et  créer une nouvelle distribution
+Se connecter à la plateforme https://services.kineis.com/
+Aller dans l’onglet Distributions, puis configurations
+Créer une nouvelle Distribution
+1
+2
+3
+3
+4
+Distribution code : push liveobject
+Distribution name : push liveobject
+Sélection des qui doivent envoyer leur Data
+
+--- Slide 6 ---
+Intégration plateforme kinéis live object
+Sélectionner le type et  format de la donnée 
+Mettre les paramètres Mqtt Liveobejct ( adresse serveur :port, topic,clientID, username, password)
+Récapitulation des différentes configurations de la distribution
+3
+Sélectionner me type : processed type basic
+Récapitulation des configurations
+Protocole : MQTT 3
+Url : url du Broker liveobject:port 
+QoS : QOS1
+Topic : dev/data
+ClientID : urn:lo:nsid:mqtt:${device.decimalId}
+Username : json+device 
+Password : Clé API générée depuis liveobject
+
+--- Slide 7 ---
+Résultats Liveobject sans décodeur
+Après l’intégration nous voyons que les données sont envoyées sous format json sur liveobject avec un payload non décodé
+
+--- Slide 8 ---
+8
+LoRaWAN (868 MHz)
+ATN niv 2
+Routeur PE
+Tunnel IPSec
+Network server
+HTTPS
+Live Objects
+Mesure une donnée physique (volume d’eau consommé, ouverture de vanne, etc.)
+
+Émet cette donnée en radio via le protocole LoRa (868 MHz)
+
+Très basse consommation → autonomie de plusieurs années
+Gateway
+Device
+Réseau backhaul
+Network server
+Réceptionne les signaux radio LoRa envoyés par les capteurs
+
+Transfert des messages vers le LoRa Network Server via internet
+Gère l’infrastructure réseau LoRa :
+
+Authentification des devices
+
+Déduplication des messages
+
+Gestion de la qualité de service
+
+Oriente les données vers la bonne plateforme applicative
+Réception des données IoT depuis le LNS
+
+Stockage, visualisation et traitement des données
+
+Gestion des capteurs (configuration, supervision, logs)
+
+Intégration facile avec des applications métiers (via API REST, MQTT, etc.
+Architecture Solution LoRAWAN SONATEL

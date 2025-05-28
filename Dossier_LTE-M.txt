@@ -1,0 +1,189 @@
+
+--- Slide 1 ---
+DRPS/DEP/STR/SPIN
+Aout   2019
+CIoT : LTE-M et NB-IoT
+
+--- Slide 2 ---
+Contexte
+Enjeux et objectifs stratégiques
+Présentation de la technologie LTE-M 
+Description de l’expérimentation technologique LTE-M
+Objectifs du pilote
+ Technologie et périmètre du Test 
+Description de la solution 
+Budget
+Calendrier
+Plan
+LTE-M
+
+--- Slide 3 ---
+Contexte
+
+Marché en pleine croissance, selon Gartner, plus de 41 milliards d’objets connectés en 2025 selon IDC 
+IoT : un des piliers majeurs du  plan stratégique d’Orange Essentiels 2020
+Nécessité d’interconnecter ces objets les uns avec les autres 
+Marché en attente d’une solution accessible au plus grand nombre.
+Couverture 4G dans la presque totalité du pays 
+Besoin en mobilité des objets pour le tracking
+
+Enjeux et objectifs
+
+Déployer un réseau destiné aux objets connectés, permettant de réduire les coûts ainsi que la consommation électrique des appareils
+Assurer la mobilité des objets 
+Utiliser notre infrastructure 4G pour faire de l’IOT
+LTE-M
+
+--- Slide 4 ---
+LTE-M
+Les réseaux IoT
+
+--- Slide 5 ---
+Caractéristiques techniques LTE-M, NB-IOT et Lora
+LTE-M
+
+--- Slide 6 ---
+8
+LTE-M
+Uses cases adressables par  LTE-M et NB-IoT
+Verticales IoT (source : IoT OMA)
+LTE-M : Pour les use cases nécessitant de la QoS, de la mobilité et /ou plus de débit
+
+--- Slide 7 ---
+Etat des déploiements LTE-M dans le groupe  Orange
+La France, l’Espagne et la Belgique ont lancé avec des couvertures nationales. 
+Avec plus de 98% de la population française couverte Orange propose une couverture nationale de la technologie LTE-M.
+La Pologne et la Roumanie ont les réseaux prêts et les ouvrent localement en fonction des PoC, offres clients, …
+
+ Les use case sont essentiellement autour du tracking car c’est le point fort de la techno (en combinant basse consommation et possibilité de mobilité).
+LTE-M
+
+--- Slide 8 ---
+Etat de déploiement  NB-IoT dans le groupe Orange
+8
+NB-IoT est déployée sur tout le territoire belge
+OBE  a collaboré avec Huawei, qui a contribué à intégrer l’IoT dans le réseau d’Orange
+Stratégie de la Belgique : 
+Ne pas déployer Lora et faire un focus sur les technos standardisées 3GPP NB-IoT et LTE-M en utilisant une seule infrastructure : la 4G. 
+OBE couvre  plus de 96% du territoire belge en LTE
+Le déploiement national nécessite juste un  ugrade software  (Huawei SRAN12.1) 
+Pas de  LoRa car  : 3x plus cher (nécessite des autorisations  du régulateur et de nouvelles Gateway)
+Source : OBE
+Use cases :
+ NB-IoT bike trackers, Smart plug et smart parking
+Stratégie du groupe : Lora + LTE-M, pas de skill center sur NB-IoT
+
+--- Slide 9 ---
+Etat de déploiement  LTE-M / NB-IoT dans le monde
+9
+Septembre  2019  : 
+153 opérateurs investissent activement dans la technologie NB-IoT, contre 141 en Avril 2019, 
+101 ont déployé / lancé commercialement des réseaux NB-IoT, en hausse de 90 en six mois. 
+29 planifient, pilotent et / ou déploient des réseaux NB-IoT. 
+ 23 évaluent / testent la technologie NB-IoT. 
+
+ 65 opérateurs investissent activement dans la technologie LTE-M, contre 60 en avril, dont:
+ 41 ont déployé / lancé commercialement des réseaux LTE-M
+13 planifient, pilotent et / ou déploient le LTE-M 
+11 testent la technologie LTE-M.
+GSA
+
+--- Slide 10 ---
+Expérimentation technologique du LTE-M
+LTE-M
+
+--- Slide 11 ---
+8
+LTE-M
+Cadrage du pilote
+Objectifs 
+Utiliser le réseau 4G existant pour faire de l’IoT.
+Voir les possibilités offertes par LTE-M   
+Anticiper les pré-requis  pour un  lancement commercial
+Uses cases cibles pour le pilote:
+Bouton d’urgence/ bouton d’alerte : mise à disposition de chaque agent de sécurité un objet connecté disposant d’un bouton d’alerte. 
+Détection d’ouverture des trappes orange pour  réagir rapidement en cas de vol de cuivre
+Plutard 
+Smart tracking :  solution de tracking permettant de suivre nos objets en temps réel (parc véhicule, contenaire etc.)
+
+Sites pour le pilote:
+Siège 
+Autre site à confirmer
+
+--- Slide 12 ---
+Impacts de l’activation du LTE-M sur le réseau
+Capacitaire : 1,4MHz  à réserver pour l’IoT qui impactera la capacité de la cellule . Environ 15% en UL et DL si les équipement trafiquent sur la LTE-M (dans le cas contraire, la capacité est libérée pour la LTE)
+
+ Energie : une augmentation de la consommation d’énergie est envisageable au niveau des RRU si certains mécanismes d’optimisation énergétique ne sont pas utilisés 
+
+Compatibilité terminaux : l’activation de la LTE-M peut impacter certains terminaux LTE FDD qui ne pourront plus se connecter à la cellule  (cas certains chipset huawei)
+
+Liste des terminaux de type smartphone impactés par l’activation de la Rel 13 – LTE-M : modèle avec Chipset Huawei et Mediatek uniquement
+
+
+
+
+
+16320 Flybox 4G  B310 impactés, upgrade manuel possible
+LTE-M
+
+--- Slide 13 ---
+8
+LTE-M
+Scénario d’implémentation
+RAN : mise à jour logiciel des antennes LTE,activation d’une license( gratuit dans le cadre du pilote)
+Utilisation du CN existant  et  de la plateforme de service IoT du groupe (Live Object)
+ Devices à installer  chez le client avec des chipset LTE-M
+
+--- Slide 14 ---
+8
+LTE-M
+Stratégie d’activation
+Activer la fonction LTE-M sur une cellule avec double couverture, 
+Evaluer le nombre d’utilisateurs qui passent de la fréquence 800 Mhz à 1800
+Travailler avec le SAV pour une assistance téléphonique aux clients impactés 
+ anticiper le parcours des  clients impactés
+
+--- Slide 15 ---
+8
+LTE-M
+Estimation du budget
+RAN : upgrade software gratuit
+Accès plateforme de service utilisation de la plateforme de service LiveObject du groupe gratuit pour le pilote
+
+Coût des devices :
+
+Tracker  100 Euros
+Bouton d’alerte environ 90$
+Détection d’ouverture de trappe : 140 Euros
+
+--- Slide 16 ---
+8
+LTE-M
+Etudier l’ensemble des devices impactés et définir une stratégie d’upgrade
+Voir les spécificités de l’APN dédié et le déploiement de façon générale
+Coordonner avec DINT sur le use case Détection d’ouverture de trappes, avec DG-Sécu sur le bouton d’alerte et tracking à voir avec DDE
+Commande des devices
+Formation de l’équipe de projet
+Activation LTE-M et déroulement du pilote
+et déroulement du pilote
+Next steps
+
+--- Slide 17 ---
+17
+MERCI
+
+--- Slide 18 ---
+18
+Sources
+https://www.gsma.com/iot
+https://www.frugalprototype.com/nb-iot-lte-m-ec-gsm-iot-lpwan/
+https://e.huawei.com/en/solutions/technical/iot/nb-iot
+https://www.gsma.com/iot
+https://www.frugalprototype.com/nb-iot-lte-m-ec-gsm-iot-lpwan/
+https://e.huawei.com/en/solutions/technical/iot/nb-iot
+
+--- Slide 19 ---
+8
+LTE-M
+Planning prévisionnel LTE-M

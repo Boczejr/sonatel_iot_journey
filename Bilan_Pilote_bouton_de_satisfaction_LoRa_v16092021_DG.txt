@@ -1,0 +1,221 @@
+
+--- Slide 1 ---
+1
+Live object
+1
+DRPS/DEP/STR/SPIN Décembre  2021
+
+--- Slide 2 ---
+IoT : les 4 briques essentielles
+connectivité
+plateforme IoT
+device
+data visualisation
+Les 4 briques essentielles à réunir pour construire un projet IoT
+Marketplace Foreground
+Orange sélectionne les meilleurs devices du marché pour ses clients
+certification et de test des objets
+
+Mise à disposition d’un catalogue d’objets connectés, alimenté par l’écosystème 
+ Actuellement, 859 produits et 485 partenaire
+Live Objects, Compatible avec n'importe quel réseau LoRa®, 2G, 3G, 4G, LTEM, Nb IoT…Collecter et héberger les données  :
+Interfaces de collecte de données, de commandes ou notification depuis/vers les objets
+Gestion des objets (provisioning, supervision, configuration, mise à jour firmware, etc)
+Routage de message entre les objets et les applications “IoT”
+Les applications “IoT” (Orange, applications clients ou cloud(s) (Microsoft Azure IoT suite, IBM, Google…)
+Permet d’exploiter et de visualiser les données collectées
+Connectivité management
+Malima, Ericsson DCP
+
+pour la gestion de la connectivité = gestion du cycle de vie de la carte SIM, surveillance de la communication, autodiagnostic
+Live object
+2
+
+--- Slide 3 ---
+IoT : les plateformes du groupe Orange
+Malima + Ericsson DCP Malima (> 15M SIM) et E // DCP établis pour la gestion de la connectivité = gestion du cycle de vie de la carte SIM, surveillance de la communication, autodiagnostic
+Live Objects Une plate-forme mondiale pour la gestion des appareils et la collecte de données
+370K deployed devices for B2B & B2C
+Une base de données, alimentée par écosystème, pour avoir une vue sur les devices : (https://foreground.orange.com/dashboard)
+Equipements connectés
+Plateforme pour faciliter l’accès aux données
+API du client
+Applications Business et Datacenter
+1
+2
+3
+Platformes - IoT Core : Trois plateformes disponible au niveau du groupe Malima, Live Objects, Marketplace
+Live object
+3
+
+--- Slide 4 ---
+Live object  : Description
+Live object une plateforme Cloud type  SaaS développé par le groupe Orange pour l’internet  des objects connectés
+Une plateforme Faciliter la vie des intégrateurs et des partenaires
+Elle destinée aux intégrateurs de solutions IoT offrant un ensemble d'outils pour faciliter l'interconnexion entre les appareils (ou «objets» connectés) et les applications métier
+Device Management
+Data  Management
+Message Management
+Contrôle et gère les  objets connectés
+suivre leur activité et leur état
+exécuter des diagnostics
+configurer et mettre à jour
+intégrer de nouveaux éléments
+Optimise et simplifie la communication des objets où qu’ils se trouvent 
+contrôler l’échange de messages
+d’être informé instantanément des anomalies sur les systèmes et pouvoir ainsi les corriger, ce qui vous permet de garantir la qualité de service
+Traiter  l’ensemble des données collectées
+de collecter et stocker en toute sécurité les données de vos objets via des API standardisées
+de gérer vos évènements et alerte
+de visualiser vos données
+Live object
+4
+
+--- Slide 5 ---
+Live object
+5
+Devices
+Connectivity plan
+Business Application
+IoT Service
+Secured API
+Live Objects
+Device/Data management
+SDK
+CO2
+TRACKER
+Détecteur ouvrant/ fermant : permet de surveiller les endroits avec accès  limiter  
+Confort intérieur :   permet de surveiller la température le taux d’humidité et la qualité de l’air d’un environnement 
+Bouton de satisfaction :  permet de mesurer le niveau de satisfaction par rapport à un servivce 
+Tracker Ercogener  :  permet de localiser un objet
+LTE-M :  4 sites de test déployés 
+NB-IoT : un site de test déployé 
+LoRa :  deux sites de test déployés
+Live Object : est une plateforme du groupe destinée aux intégrateurs de solutions IoT  pour le traitement et stockage de données.
+Smart opération :  pour la présentation des données remontées par les devices ( C02  humidité, air polluant etc)  
+Smart  tracking :  présentation des données de localisation remontées par le tracker
+Interface Skiply : présentation des donnés remontées par le bouton de satisfaction
+Live Objects  : Projets
+NB : Live Object sera utilisé ultérieurement dans le pilote NB-IoT  et 5G ( massive IoT)
+Ouvrant/fermant
+
+--- Slide 6 ---
+Live object
+6
+Live Object  : Tenants SONATEL
+Deux tenant live Object ont été crée pour des besoins de  projet :
+Tenant pour les objets LoRa  : 12 devices de test provisionnés 
+Tenant pour le projet LTE-M : 02 devices   de test provisionnés
+Tenant : LTE-M
+Tenant : LoRa
+
+--- Slide 7 ---
+Live object
+7
+BILAN de test du projet Bouton de satisfaction
+
+--- Slide 8 ---
+Live object
+Usages
+Solution qui permet de mesurer la satisfaction client simplement, en quelques minutes sur le vif pour aider les employés et les managers à assurer un service excellent à chaque instant aux consommateurs.
+Objectifs stratégiques
+Se positionner sur le marché de l’IoT avec des solutions simples et facile à déployer
+ Répondre aux sollicitations des clients entreprises
+Tester la technologie LoRa dédiée à L’IoT
+Bénéfices clients
+Amélioration du service client 
+Gain de temps et d’argent 
+ Une meilleure connaissance  du ressenti clients en temps réel
+Cible
+Smart shop et agence d’Orange 
+Restaurants
+Banques
+ Aéroports
+ centre commercial
+ Supermarchés
+….
+8
+Les résultats  sont disponibles  quelques minutes après les premiers votes et sont consultables via  des fichiers Excel ou des tableaux de bord. 
+L’interface Web Smilio, permet de créer de nouvelles enquêtes, de gérer les terminaux et de comparer les résultats des différentes campagnes.
+Accès aux résultats
+
+--- Slide 9 ---
+Live object
+9
+Le dashboard Skiply permet de :
+Suivre en live la satisfaction des clients
+avoir des infos sur le nombre de vote, la répartition des votes dans le temps et dans les domaines concernées
+visualiser facilement les résultats d'enquêtes ou d'horodatages
+Analyser et recouper les données avec vos systèmes externes (données de trésorerie, horaires du personnel, données météorologiques, etc.)
+comparer les résultats entre filiales
+Suivre régulièremet vos performances et gérer vos équipes avec des plans d'actions précis!
+Comparer vos résultats au sein de votre réseau dans différentes catégories: service, qualité, temps d'attente…
+Afficher les performances optimales / inférieures
+Afficher la moyenne nationale
+
+--- Slide 10 ---
+Live object
+Comment ça marche
+Avec ses cinq boutons connectés, le terminal Smilio S peut être utilisé pour mener des enquêtes continues, dans toutes sortes d'espaces publics. 
+À une simple pression sur un bouton, les utilisateurs peuvent donner facilement et rapidement leur avis, signaler un problème ou suggérer une amélioration. 
+Placé au milieu d’une zone de trafic, le terminal Smilio offre un record de taux de vote et est sans égal dans la collecte à la fois en temps réel et de façon continue et autonome
+Possibilité de personnalisé le clavier à l’aide de stickers et de spécifier les questions, actions en fonction des boutons 
+Accès aux résultats possible via Excel ou Dashboard
+Exemple d’utilisation du service : Vinci
+10
+
+--- Slide 11 ---
+Live object
+11
+Acquisition Installation d’un Gateway LoRa au siège de la Sonatel
+Acquisition de devices de satisfaction  5  boutons compatibles LoRa
+Déclaration des devices dans LiveObjects, plateforme IoT mutualisée du groupe
+Utilisation de l’application du fournisseur Skiply pour la visualisation des données issues de LO
+Chaque objet bouton est déclaré avec les idenfiants suivants : 
+DevEui : paramètre communiqué par Skiply
+AppEui : paramètre communiqué par Skiply 
+Appkey : paramètre communiqué par Skiply
+La gateway LoRa installée au siége est relié au cœur de Réseau LoRa Anywhere du groupe Orange pour les opérations de maintenance et autres
+Les boutons sont installés au restaurant du siège pour permettre aux clients  d’exprimer leur degré de satisfaction sur les services proposés .
+Le fournisseur propose deux interfaces : 
+Une interface d’administration permettant de définir les questions et réponses possibles sur chaque device 
+Une deuxième interface pour la visualisation des votes clients
+
+--- Slide 12 ---
+Live object
+12
+Des stickers ont été crées pour la personnalisation des devices de satisfaction en fonctions des questions posées et des réponses attendues
+Device sans personnalisation
+Stickers personnalisés pour l’évaluation du niveau de satisfaction
+Stickers personnalisés pour la remontée de problème
+Devices personnalisés
+
+--- Slide 13 ---
+Live object
+13
+Nombre d’appuis : 344
+Device Remontée de problème : 47
+Ne sais pas  : 3,4%
+Peu satisfait  : 7,74%
+Pas du tout satisfait  : 10,44%
+Satisfait : 50,51%
+Très satisfait : 27,95%
+Device Satisfaction client  :  297
+Hygiène et propreté : 14,9% 
+Menu  : 25,53%
+Personnels : 17,02%
+Qualité des  repas : 29,79%
+Service : 12,77%
+
+--- Slide 14 ---
+Live object
+14
+Répartition des appuis , par jour et  par tranche horaire: il y’a plus d’appuis  les lundis et jeudis entre 9h et 15h  et  la plupart des  clients sont satisfaits (bouton 4 et 5).
+
+--- Slide 15 ---
+Live object
+15
+Les remontées de problèmes sont faites  les  jeudis et vendredis  et sont souvent liées  au menu, à la qualité des repas.
+
+--- Slide 16 ---
+Merci
