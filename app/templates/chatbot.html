@@ -170,54 +170,77 @@
     
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-          <div class="footer-col">
-            <h4>Liens rapides</h4>
-            <ul>
-              <li><a href="{{ url_for('main.index') }}">Accueil</a></li>
-              <li><a href="#">À propos</a></li>
-              <li><a href="{{ url_for('main.technologies') }}">Technologies</a></li>
-              <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Solutions</h4>
-            <ul>
-              <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#ltem">LTE-M</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#mobile">5G</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contacts</h4>
-            <ul>
-              <li><a href="#">contact@iot-sonatel.sn</a></li>
-              <li><a href="#">+221 77 123 45 67</a></li>
-              <li><a href="#">Dakar, Sénégal</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Suivez-nous</h4>
-            <div class="footer-social">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-x"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>Liens rapides</h4>
+          <ul>
+            <li><a href="{{ url_for('main.index') }}">Accueil</a></li>
+            <li><a href="{{ url_for('main.catalogue') }}">Catalogue</a></li>
+            <li><a href="{{ url_for('main.use_cases') }}">Cas d'Usage</a></li>
+            <li>
+              <a href="{{ url_for('main.technologies') }}">Technologies</a>
+            </li>
+            <li>
+              <a href="{{ url_for('main.value_chain') }}">Chaine de Valeur</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Solutions</h4>
+          <ul>
+            <li>
+              <a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a>
+            </li>
+            <li>
+              <a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT</a>
+            </li>
+            <li><a href="{{ url_for('main.technologies') }}#ltem">LTE-M</a></li>
+            <li><a href="{{ url_for('main.technologies') }}#mobile">5G</a></li>
+            <li>
+              <a href="{{ url_for('main.technologies') }}#satellite"
+                >Connectivité satellite</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4><a href="{{ url_for('main.contact') }}">Contacts</a></h4>
+          <ul>
+            <li><a href="#">contact@iot-sonatel.sn</a></li>
+            <li><a href="#">+221 77 123 45 67</a></li>
+            <li><a href="#">Dakar, Sénégal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suivez-nous</h4>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/GroupeSonatel" target="_blank" 
+   rel="noopener noreferrer"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/GroupeSonatel" target="_blank" 
+   rel="noopener noreferrer"><i class="fab fa-x"></i></a>
+            <a href="https://www.linkedin.com/company/groupesonatel" target="_blank" 
+   rel="noopener noreferrer"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://www.youtube.com/c/GroupeSonatel" target="_blank" 
+   rel="noopener noreferrer"
+              ><i class="fab fa-youtube"></i
+            ></a>
           </div>
         </div>
-      
-        <div class="footer-bottom">
-          <p>&copy; 2025 Sonatel IoT Journey. Tous droits réservés.</p>
-          <div class="footer-links">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
-          </div>
-        </div>
-      </footer>
+      </div>
 
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sonatel IoT Journey. Tous droits réservés.</p>
+        <div class="footer-links">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+        </div>
+      </div>
+    </footer>
+      
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
  <!-- Back to Top Button -->

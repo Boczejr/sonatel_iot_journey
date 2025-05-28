@@ -5,7 +5,20 @@
 :root {
   /* Couleurs Sonatel/Orange */
   --primary: #FF7900; /* Orange principal */
-  --secondary: #038C7F; /* Vert Bleu Sonatel */
+  --primary-dark: #E56D00;
+  --primary-light: #FF9A42;
+  --secondary: #038C7F; /* Vert Sonatgel */
+  --accent: #00A0E1;
+  --dark: #1A1A2E;
+  --light: #F8F9FA;
+  --white: #FFFFFF;
+  --gray: #6C757D;
+  --light-gray: #E9ECEF;
+  --sonatel-orange: #F39200;
+  --sonatel-dark: #504f53;
+  --sonatel-light: #F5F5F5;
+  --sonatel-white: #FFFFFF;
+
   
   /* Typographie */
   --font-main: 'Poppins', sans-serif;
@@ -1038,7 +1051,7 @@ body.no-scroll {
 /* Stats Section */
 .use-cases-stats {
     background: var(--sonatel-dark);
-    color: white;
+    color: rgb(146, 142, 142);
     padding: 4rem 2rem;
     text-align: center;
 }
