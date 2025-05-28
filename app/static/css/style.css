@@ -5,20 +5,7 @@
 :root {
   /* Couleurs Sonatel/Orange */
   --primary: #FF7900; /* Orange principal */
-  --primary-dark: #E56D00;
-  --primary-light: #FF9A42;
   --secondary: #038C7F; /* Vert Bleu Sonatel */
-  --secondary-light: #00558C;
-  --accent: #00A0E1;
-  --dark: #1A1A2E;
-  --light: #F8F9FA;
-  --white: #FFFFFF;
-  --gray: #6C757D;
-  --light-gray: #E9ECEF;
-  --sonatel-orange: #F39200;
-  --sonatel-dark: #464550;
-  --sonatel-light: #F5F5F5;
-  --sonatel-white: #FFFFFF;
   
   /* Typographie */
   --font-main: 'Poppins', sans-serif;
@@ -157,7 +144,6 @@ a:hover {
 /* Brand/Logo Stacked */
 .brand {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-decoration: none;
     padding: 5px 0;
@@ -170,10 +156,12 @@ a:hover {
 }
 
 .brand-text {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: var(--secondary);
     line-height: 1;
+    padding-top: 60px;
+    padding-left: 5px;
 }
 
 .highlight {
@@ -505,7 +493,7 @@ body.no-scroll {
   
   .tech-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
   }
   
@@ -516,6 +504,46 @@ body.no-scroll {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
   }
+
+  .last-cards-wrapper {
+  grid-column: 1 / -1; /* Prend toute la largeur */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.last-cards-wrapper .tech-card-section {
+  flex: 0 0 calc(33.33% - 30px); /* Largeur égale à 1/3 de la grille */
+  max-width: px; /* Empêche l'étirement */
+}
+
+/* Version Mobile (moins de 768px) */
+@media (max-width: 768px) {
+  .last-cards-wrapper {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column; /* Empile verticalement */
+    align-items: center; /* Centre horizontalement */
+    gap: 20px; /* Réduit l'espace entre les cartes */
+    padding: 0 15px; /* Marge latérale pour petits écrans */
+  }
+
+  .last-cards-wrapper .tech-card-section {
+    flex: 0 0 auto; /* Désactive le calcul de largeur */
+    width: 100%; /* Prend toute la largeur disponible */
+    max-width: 300px; /* Largeur max cohérente pour mobile */
+  }
+}
+
+/* Option : Adaptation pour très petits écrans (< 400px) */
+@media (max-width: 400px) {
+  .last-cards-wrapper .tech-card-section {
+    max-width: 100%; /* S'adapte à l'écran étroit */
+    padding: 20px 15px; /* Padding plus serré */
+  }
+}
+
 
   .button-tech{
     display: inline-flex;
@@ -1518,6 +1546,244 @@ body.no-scroll {
     }
 }
 
+/* Mini Catalogue Styles */
+.mini-catalogue {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mini-catalogue::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--primary);
+}
+
+.section-header p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mini-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.mini-product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.mini-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.product-image-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.mini-product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.mini-product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.quick-view-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.quick-view-btn:hover {
+    background: var(--secondary);
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.product-excerpt {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.tech-tag {
+    background: #f0f0f0;
+    color: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cta-container {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    background: var(--primary);
+    color: white;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(255, 121, 0, 0.3);
+}
+
+.cta-btn i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--secondary);
+    box-shadow: 0 6px 20px rgba(3, 140, 127, 0.3);
+}
+
+.cta-btn:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mini-products-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mini-catalogue {
+        padding: 2rem 0;
+    }
+    
+    .product-image-container {
+        height: 180px;
+    }
+}
+
+
 /* Section Satellite */
 .satellite-section {
     padding: 5rem 2rem;
@@ -2494,7 +2760,7 @@ body.no-scroll {
 /* Formulaire Contact */
 
 .contact-section {
-  background-color: black;
+  background-color: var(--secondary);
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
@@ -3611,6 +3877,78 @@ body.no-scroll {
     cursor: pointer;
 }
 
+/* A PROPOS Dans contact */
+
+.about-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  font-family: var(--font-main, 'Poppins', sans-serif);
+  color: #333;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.about-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.about-title h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.about-title .subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.about-content p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.about-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+/* Simple Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /* ================ Footer Sonatel ================ */

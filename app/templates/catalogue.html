@@ -19,6 +19,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
 </head>
 <body>
     <!-- Preloader -->
@@ -369,9 +370,10 @@
             <h4>Solutions</h4>
             <ul>
               <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT / LTE-M</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#mobile">4G / 5G</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#satellite"pngnnectivité satellite<png</li>
+              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#ltem">LTE-M</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#mobile">5G</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
             </ul>
           </div>
           <div class="footer-col">

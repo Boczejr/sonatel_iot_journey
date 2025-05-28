@@ -20,6 +20,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
 </head>
 <body>
     <!-- Preloader -->
@@ -115,6 +116,34 @@
   </section>
 
 
+  <!-- Section À PROPOS -->
+<section class="about-section" id="about">
+  <div class="about-container">
+    <div class="about-title">
+      <h2>À propos de Sonatel IoT Journey</h2>
+      <p class="subtitle">Un portail interactif au cœur de l’innovation IoT au Sénégal</p>
+    </div>
+    
+    <div class="about-content">
+      <p>
+        <strong>Sonatel IoT Journey</strong> est une plateforme web conçue pour mettre en lumière l’offre <strong>IoT</strong> de <strong>Sonatel</strong>, en s’inspirant du modèle du Groupe Orange. Elle a pour objectif de présenter de manière claire et interactive :
+      </p>
+
+      <ul class="about-list">
+        <li><strong>La chaîne de valeur IoT</strong> et le positionnement stratégique de Sonatel</li>
+        <li><strong>Les technologies IoT expérimentées</strong> (LoRaWAN, NB-IoT, LTE-M, 4G/5G, satellite)</li>
+        <li><strong>Les cas d’usage concrets</strong> déjà mis en œuvre : géolocalisation, capteurs, monitoring, agriculture, objets connectés...</li>
+        <li>L’<strong>intégration d’un assistant intelligent (GenAI)</strong> pour orienter, informer et conseiller les clients</li>
+      </ul>
+
+      <p>
+        Cette initiative vise à démocratiser les solutions IoT en Afrique, à encourager l’innovation locale, et à offrir un accompagnement sur mesure aux entreprises, collectivités et particuliers.
+      </p>
+    </div>
+  </div>
+</section>
+
+
   <!-- Contact Info Section -->
 <section class="contact-info-section">
     <div class="container">
@@ -202,6 +231,8 @@
 
 
 
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -218,8 +249,9 @@
             <h4>Solutions</h4>
             <ul>
               <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT / LTE-M</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#mobile">4G / 5G</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#ltem">LTE-M</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#mobile">5G</a></li>
               <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
             </ul>
           </div>

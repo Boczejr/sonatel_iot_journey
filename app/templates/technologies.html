@@ -20,6 +20,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Charger jQuery avant vos scripts (si nécessaire) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Preloader -->
@@ -138,21 +141,22 @@
             </div>
         </section>
 
-        <!-- Section NB-IoT / LTE-M -->
+        <!-- Section NB-IoT -->
         <section class="tech-section" id="nbiot">
             <div class="tech-container">
                 <div class="tech-header">
                     <i class="fas fa-sim-card tech-icon"></i>
-                    <h2 class="tech-title">NB-IoT / LTE-M</h2>
+                    <h2 class="tech-title">NB-IoT</h2>
                 </div>
                 <div class="tech-content reverse">
                     <div class="tech-description">
-                        <p>Les technologies NB-IoT et LTE-M permettent une connectivité cellulaire optimisée pour l'IoT, combinant couverture étendue et consommation énergétique réduite.</p>
+                        <p>Le NB-IoT (Narrowband IoT) est une technologie LPWAN spécialement conçue pour les applications IoT nécessitant une longue portée et une faible consommation énergétique.</p>
                         <ul class="tech-features">
-                            <li><i class="fas fa-check-circle"></i> Fonctionnement en bande licenciée</li>
-                            <li><i class="fas fa-check-circle"></i> Pénétration accrue en intérieur</li>
-                            <li><i class="fas fa-check-circle"></i> Compatibilité avec l'infrastructure mobile existante</li>
-                            <li><i class="fas fa-check-circle"></i> Prise en charge de la mobilité pour LTE-M</li>
+                            <li><i class="fas fa-check-circle"></i> Fonctionnement en bande licenciée avec excellente pénétration</li>
+                            <li><i class="fas fa-check-circle"></i> Optimisé pour les appareils fixes et très bas débit</li>
+                            <li><i class="fas fa-check-circle"></i> Consommation énergétique ultra-faible</li>
+                            <li><i class="fas fa-check-circle"></i> Couverture étendue (jusqu'à +20dB vs LTE classique)</li>
+                            <li><i class="fas fa-check-circle"></i> Idéal pour les capteurs statiques (compteurs, monitoring...)</li>
                         </ul>
                     </div>
                     <div class="tech-image">
@@ -162,19 +166,44 @@
             </div>
         </section>
 
-        <!-- Section 4G / 5G -->
+        <!-- Section LTE-M -->
+        <section class="tech-section" id="ltem">
+            <div class="tech-container">
+                <div class="tech-header">
+                    <i class="fas fa-sim-card tech-icon"></i>
+                    <h2 class="tech-title">LTE-M</h2>
+                </div>
+                <div class="tech-content">
+                    <div class="tech-image">
+                        <img src="{{ url_for('static', filename='images/lte-m.jpg') }}" alt="LTE-M Technology">
+                    </div>
+                    <div class="tech-description">
+                        <p>Le LTE-M (LTE for Machines) offre une connectivité mobile optimisée pour l'IoT avec un meilleur débit et une latence réduite par rapport au NB-IoT.</p>
+                        <ul class="tech-features">
+                            <li><i class="fas fa-check-circle"></i> Prise en charge complète de la mobilité et handover</li>
+                            <li><i class="fas fa-check-circle"></i> Débit plus élevé que NB-IoT (jusqu'à 1Mbps)</li>
+                            <li><i class="fas fa-check-circle"></i> Compatible avec la voix (VoLTE)</li>
+                            <li><i class="fas fa-check-circle"></i> Latence réduite pour applications temps quasi-réel</li>
+                            <li><i class="fas fa-check-circle"></i> Idéal pour les objets mobiles (trackers, wearables...)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5G -->
         <section class="tech-section" id="mobile">
             <div class="tech-container">
                 <div class="tech-header">
                     <i class="fas fa-tower-cell tech-icon"></i>
-                    <h2 class="tech-title">4G / 5G</h2>
+                    <h2 class="tech-title">5G</h2>
                 </div>
                 <div class="tech-content">
                     <div class="tech-image">
-                        <img src="{{ url_for('static', filename='images/4g-5g.jpg') }}" alt="5G Technology">
+                        <img src="{{ url_for('static', filename='images/5g.jpg') }}" alt="5G Technology">
                     </div>
                     <div class="tech-description">
-                        <p>Les réseaux 4G et 5G de Sonatel offrent une connectivité haut débit pour les applications IoT nécessitant un transfert de données important et une latence réduite.</p>
+                        <p>Les réseaux 5G de Sonatel offrent une connectivité haut débit pour les applications IoT nécessitant un transfert de données important et une latence réduite.</p>
                         <ul class="tech-features">
                             <li><i class="fas fa-check-circle"></i> Haut débit pour les applications gourmandes en données</li>
                             <li><i class="fas fa-check-circle"></i> Latence ultra-faible avec la 5G</li>
@@ -306,8 +335,9 @@
             <h4>Solutions</h4>
             <ul>
               <li><a href="{{ url_for('main.technologies') }}#lorawan">LoRaWAN</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT / LTE-M</a></li>
-              <li><a href="{{ url_for('main.technologies') }}#mobile">4G / 5G</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#nbiot">NB-IoT</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#ltem">LTE-M</a></li>
+              <li><a href="{{ url_for('main.technologies') }}#mobile">5G</a></li>
               <li><a href="{{ url_for('main.technologies') }}#satellite">Connectivité satellite</a></li>
             </ul>
           </div>
@@ -368,6 +398,7 @@
      }
  });
  </script>
+
 
 
 <script>

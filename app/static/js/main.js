@@ -550,3 +550,50 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// mini catalogue Js
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation d'entrée des cartes
+    const productCards = document.querySelectorAll('.mini-product-card');
+    
+    productCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, 100);
+    });
+    
+    // Quick View Modal (simplifié)
+    const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+    
+    quickViewBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productId = this.getAttribute('data-product');
+            
+            // Ici vous pourriez faire un fetch pour les détails complets
+            alert(`Fonctionnalité complète à implémenter\nProduit: ${productId}`);
+        });
+    });
+    
+    // Animation au scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.mini-catalogue .section-header, .mini-product-card').forEach(el => {
+        observer.observe(el);
+    });
+});
